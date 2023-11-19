@@ -1,0 +1,35 @@
+.container {
+  header {
+    color: var(--text-color);
+    font-family: "Montserrat-Regular", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    line-height: 24px;
+  }
+
+  form {
+    display: flex;
+    justify-content: start;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    margin-bottom: 0.1rem;
+    input {
+      padding: 1.5rem 2rem;
+    }
+
+    button {
+      background-color: var(--primary-color);
+      border-radius: 0px 5px 5px 0px;
+      height: 5.8rem;
+      text-transform: none;
+
+      color: var(--light-text-color);
+      font-family: "Montserrat-Regular", Helvetica;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.2px;
+      line-height: 2.8rem;
+    }
+  }
+}

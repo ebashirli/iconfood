@@ -1,0 +1,18 @@
+.clients {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5rem;
+  margin: 11rem auto;
+
+  @media screen and (min-width: 1000px) {
+    flex-direction: row;
+    width: 72%;
+  }
+}
+
+.client {
+  max-width: 14rem;
+}

@@ -1,0 +1,63 @@
+.navbarDark,
+.social,
+.soialIcons,
+.contact,
+.contact a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbarDark {
+  transform: translateY(-301%);
+  display: none;
+  transition-duration: 500ms;
+
+  background-color: var(--dark-background-color);
+  padding-inline: 2.4rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.3rem;
+  color: var(--light-text-color);
+
+  a:link {
+    color: var(--light-text-color);
+    font-family: var(--h-6-font-family);
+    font-size: var(--h-6-font-size);
+    font-style: var(--h-6-font-style);
+    font-weight: var(--h-6-font-weight);
+    letter-spacing: var(--h-6-letter-spacing);
+    line-height: var(--h-6-line-height);
+    text-decoration: none;
+  }
+
+  @media screen and (min-width: 1000px) {
+    transform: translateY(0);
+    position: relative;
+    display: flex;
+  }
+}
+
+.contact {
+  .phone,
+  .mail {
+    margin: 1rem;
+  }
+  a {
+    gap: 0.5rem;
+  }
+}
+
+.social {
+  padding: 1rem;
+  gap: 1rem;
+  align-items: start;
+  padding-bottom: 0;
+
+  .soialIcons {
+    align-items: end;
+  }
+
+  li {
+    padding: 0.5rem;
+  }
+}

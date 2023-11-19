@@ -1,0 +1,42 @@
+.blog {
+  margin-top: 8rem;
+  width: 92%;
+  margin: auto;
+  padding-bottom: 4.5rem;
+  padding-inline: 4.2rem;
+}
+
+.header {
+  display: grid;
+  gap: 1rem;
+
+  margin-bottom: 8rem;
+}
+
+h6 {
+  font-family: var(--h-6-font-family);
+  font-size: var(--h-6-font-size);
+  font-style: var(--h-6-font-style);
+  font-weight: var(--h-6-font-weight);
+  letter-spacing: var(--h-6-letter-spacing);
+  line-height: var(--h-6-line-height);
+}
+
+.h6 {
+  text-align: center;
+  color: var(--primary-text-color);
+}
+
+.h2 {
+  color: var(--text-color);
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  gap: 3rem;
+
+  @media screen and (min-width: 1000px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

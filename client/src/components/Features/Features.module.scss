@@ -1,0 +1,43 @@
+.features {
+  text-align: center;
+  padding: auto;
+  padding-bottom: 6.8rem;
+}
+
+.header {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 8rem;
+}
+
+h3 {
+  font-family: var(--h-4-font-family);
+  font-size: var(--h-4-font-size);
+  font-style: var(--h-4-font-style);
+  font-weight: var(--h-4-font-weight);
+  letter-spacing: var(--h-4-letter-spacing);
+  line-height: var(--h-4-line-height);
+}
+
+.h4 {
+  color: var(--second-text-color);
+}
+
+.p {
+  color: var(--second-text-color);
+  width: 60%;
+  margin: auto;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  @media screen and (min-width: 1000px) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 72%;
+    margin: auto;
+  }
+}

@@ -1,0 +1,70 @@
+.main {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  padding-inline: 3.55rem;
+
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 5.6rem;
+}
+
+h3 {
+  font-family: var(--h-3-font-family);
+  font-size: var(--h-3-font-size);
+  font-style: var(--h-3-font-style);
+  font-weight: var(--h-3-font-weight);
+  letter-spacing: var(--h-3-letter-spacing);
+  line-height: var(--h-3-line-height);
+}
+
+.h3 {
+  margin: auto;
+  color: var(--text-color);
+
+  width: 60%;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-family: var(--paragraph-font-family);
+  font-size: var(--paragraph-font-size);
+  font-style: var(--paragraph-font-style);
+  font-weight: var(--paragraph-font-weight);
+  letter-spacing: var(--paragraph-letter-spacing);
+  line-height: var(--paragraph-line-height);
+}
+
+.p {
+  color: var(--second-text-color);
+  width: 59%;
+  margin: auto;
+}
+
+.cards {
+  display: grid;
+  gap: 3rem;
+  margin-bottom: 3.2rem;
+
+  @media screen and (min-width: 1000px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.button {
+  background: none;
+  border-radius: 3.7rem;
+  color: var(--primary-color);
+
+  font-family: "Montserrat-Bold", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  line-height: 2.2rem;
+
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+}

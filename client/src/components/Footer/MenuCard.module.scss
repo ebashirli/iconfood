@@ -1,0 +1,29 @@
+.h6 {
+  color: var(--text-color);
+  font-family: "Montserrat-Bold", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  line-height: 24px;
+}
+
+.menuCard {
+  display: grid;
+  gap: 2rem;
+}
+
+.items {
+  display: grid;
+  gap: 1rem;
+}
+
+.item {
+  color: var(--second-text-color);
+  font-family: var(--link-font-family);
+  font-size: var(--link-font-size);
+  font-style: var(--link-font-style);
+  font-weight: var(--link-font-weight);
+  letter-spacing: var(--link-letter-spacing);
+  line-height: var(--link-line-height);
+  text-decoration: none;
+}

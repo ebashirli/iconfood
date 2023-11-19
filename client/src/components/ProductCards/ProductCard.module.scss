@@ -1,0 +1,57 @@
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  min-height: 39.8rem;
+}
+
+.img {
+  min-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.info {
+  padding: 2.5rem;
+  padding-bottom: 3.5rem;
+
+  display: grid;
+  gap: 1rem;
+
+  color: var(--text-color);
+  text-align: center;
+}
+
+h5 {
+  font-family: var(--h-5-font-family);
+  font-size: var(--h-5-font-size);
+  font-style: var(--h-5-font-style);
+  font-weight: var(--h-5-font-weight);
+  letter-spacing: var(--h-5-letter-spacing);
+  line-height: var(--h-5-line-height);
+}
+
+.link {
+  color: var(--second-text-color);
+  font-family: var(--link-font-family);
+  font-size: var(--link-font-size);
+  font-style: var(--link-font-style);
+  font-weight: var(--link-font-weight);
+  letter-spacing: var(--link-letter-spacing);
+  line-height: var(--link-line-height);
+}
+
+.price {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.old {
+  color: var(--muted-color);
+}
+
+.new {
+  color: var(--secondary-color-1);
+}

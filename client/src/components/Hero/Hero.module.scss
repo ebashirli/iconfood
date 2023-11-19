@@ -1,0 +1,102 @@
+.hero {
+  background: linear-gradient(
+    90deg,
+    rgba(150, 233, 251, 1) 0%,
+    rgba(171, 236, 214, 1) 100%
+  );
+  padding-top: 8rem;
+
+  border-radius: 2.5rem;
+  margin-inline: 1.3rem;
+
+  @media screen and (min-width: 1000px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+}
+
+.header {
+  text-align: center;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 3.277rem;
+  margin-bottom: 10.642rem;
+
+  @media screen and (min-width: 1000px) {
+    text-align: left;
+  }
+}
+
+.img {
+  position: absolute;
+  z-index: 1;
+  transform: translate(-34%, -29%);
+  scale: 0.72;
+  @media screen and (min-width: 1000px) {
+    scale: 1;
+    right: -30rem;
+    top: 20rem;
+  }
+}
+
+.imgCombine {
+  padding-top: 5rem;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 2.587rem;
+  @media screen and (min-width: 1000px) {
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    padding: 0;
+  }
+}
+
+.h {
+  color: var(--hover-text-color);
+  font-family: var(--h-5-font-family);
+  font-size: var(--h-5-font-size);
+  font-style: var(--h-5-font-style);
+  font-weight: var(--h-5-font-weight);
+  letter-spacing: var(--h-5-letter-spacing);
+  line-height: var(--h-5-line-height);
+}
+
+.headline {
+  color: var(--text-color);
+  font-family: var(--h-2-font-family);
+  font-size: var(--h-2-font-size);
+  font-style: var(--h-2-font-style);
+  font-weight: var(--h-2-font-weight);
+  letter-spacing: var(--h-2-letter-spacing);
+  line-height: var(--h-2-line-height);
+  text-align: center;
+  width: 52%;
+}
+
+.p {
+  color: var(--second-text-color);
+  font-family: var(--h-4-font-family);
+  font-size: var(--h-4-font-size);
+  font-style: var(--h-4-font-style);
+  font-weight: var(--h-4-font-weight);
+  letter-spacing: var(--h-4-letter-spacing);
+  line-height: var(--h-4-line-height);
+  width: 65%;
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+
+  font-family: var(--h-3-font-family);
+  font-size: var(--h-3-font-size);
+  font-style: var(--h-3-font-style);
+  font-weight: var(--h-3-font-weight);
+  letter-spacing: var(--h-3-letter-spacing);
+  line-height: var(--h-3-line-height);
+}
