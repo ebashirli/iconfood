@@ -1,0 +1,50 @@
+.content {
+  color: var(--primary-text-color);
+  padding-bottom: 4.4rem;
+  margin-bottom: 8rem;
+
+  display: flex;
+
+  flex-direction: column;
+
+  @media screen and (min-width: 1000px) {
+    flex-direction: row-reverse;
+  }
+}
+
+.header {
+  padding-inline: 4.65rem;
+  display: grid;
+  gap: 1.6rem;
+  margin-bottom: 5rem;
+}
+
+h2 {
+  font-family: var(--h-2-font-family);
+  font-size: var(--h-2-font-size);
+  font-style: var(--h-2-font-style);
+  font-weight: var(--h-2-font-weight);
+  letter-spacing: var(--h-2-letter-spacing);
+  line-height: var(--h-2-line-height);
+}
+
+.h2 {
+  color: var(--text-color);
+  width: 80%;
+}
+
+.p {
+  color: var(--second-text-color);
+  width: 80%;
+}
+
+.imgs {
+  display: flex;
+  gap: 1.168rem;
+  overflow-x: scroll;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}

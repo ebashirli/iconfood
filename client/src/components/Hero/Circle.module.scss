@@ -1,0 +1,51 @@
+.big {
+  background-color: var(--light-background-color);
+  border-radius: 50%;
+  height: 29.4rem;
+  width: 29.4rem;
+}
+
+.small-white {
+  background-color: var(--light-background-color);
+  border-radius: 50%;
+  height: 4.7rem;
+  width: 4.7rem;
+  position: absolute;
+  top: 0.27rem;
+  left: 0;
+}
+
+.tiny-blue-right {
+  background-color: #977df4;
+  border-radius: 50%;
+  height: 0.9rem;
+  position: absolute;
+  width: 0.9rem;
+  transform: translateX(100%);
+  top: 7.402rem;
+
+  transform: translateX(100%);
+  right: -2.096rem;
+}
+
+.tiny-blue-left {
+  background-color: #977df4;
+  border-radius: 50%;
+  height: 0.9rem;
+  position: absolute;
+  width: 0.9rem;
+  left: 1.455rem;
+  bottom: 3.68rem;
+}
+
+.tiny-white {
+  background-color: var(--light-background-color);
+  border-radius: 50%;
+  height: 1.8rem;
+  position: absolute;
+  width: 1.8rem;
+  bottom: 12.536rem;
+  transform: translateX(100%);
+  right: -0.727rem;
+  z-index: 2;
+}
