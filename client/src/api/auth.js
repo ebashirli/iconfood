@@ -7,7 +7,8 @@ export const register = async (regObj) => {
 };
 
 export const login = async (logObj) => {
-  const result = await instance.post("auth/local/login", logObj);
+  console.log(logObj);
+  const result = await instance.post("auth/local", logObj);
 
   return result.data;
 };

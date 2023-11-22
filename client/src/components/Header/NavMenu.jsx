@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styles from "./NavMenu.module.scss";
+import LoginRegisterLinks from "../LoginRegisterLinks";
 
 function NavMenu() {
   return (
@@ -18,6 +19,7 @@ function NavMenu() {
           <NavLink to={el.toLowerCase()}>{el}</NavLink>
         </li>
       ))}
+      <LoginRegisterLinks />
     </ul>
   );
 }

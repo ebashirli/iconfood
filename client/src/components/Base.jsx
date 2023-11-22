@@ -2,12 +2,12 @@ import styles from "./Base.module.scss";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 
-function Base({ children }) {
+function Base({ children, headerClassName, footerClassName }) {
   return (
     <div className={styles.container}>
-      <Header />
+      <Header className={headerClassName} />
       {children}
-      <Footer />
+      <Footer className={footerClassName} />
     </div>
   );
 }

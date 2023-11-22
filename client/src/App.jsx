@@ -6,8 +6,7 @@ import { getProducts } from "./api/products";
 import Homepage from "./pages/Homepage";
 import ProductList from "./pages/ProductList";
 import Product from "./pages/Product";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
+import SignInUp from "./pages/SignInUp";
 
 import About from "./pages/About";
 import Team from "./pages/Team";
@@ -33,8 +32,8 @@ function App() {
       <Routes>
         <Route index element={<Homepage />} />
 
-        <Route path="login" element={<Login />} />
-        <Route path="signup" element={<Signup />} />
+        <Route path="login" element={<SignInUp isLogin={true} />} />
+        <Route path="signup" element={<SignInUp />} />
 
         <Route path="products" element={<ProductList />}>
           <Route path=":id" element={<Product />} />

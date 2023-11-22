@@ -31,9 +31,9 @@ const menuCards = [
   },
 ];
 
-function Footer() {
+function Footer({ className }) {
   return (
-    <footer className={styles.footer}>
+    <footer className={`${styles.footer} ${className}`}>
       <header className={styles.header}>
         <Logo />
         <div className={styles.social}>
@@ -57,9 +57,9 @@ function Footer() {
           />
         </div>
       </menu>
-      <div className={styles.copyright}>
+      <footer className={styles.copyright}>
         <p>Made With Love By Finland All Right Reserved </p>
-      </div>
+      </footer>
     </footer>
   );
 }
