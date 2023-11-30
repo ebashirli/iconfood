@@ -1,14 +1,15 @@
 import { instance } from ".";
 
 export const register = async (regObj) => {
-  const result = await instance.post("auth/local/register", regObj);
+  const { data, error } = await instance.post("auth/local/register", regObj);
+  console.log(data, "data");
+  if (error) throw new Error(error.message);
 
-  return result.data;
+  console.log(data);
+  return data;
 };
 
 export const login = async (logObj) => {
-  console.log(logObj);
-  const result = await instance.post("auth/local", logObj);
-
-  return result.data;
+  const { email: identifier, password } = logObj;
+  return await instance.post("auth/local", { identifier, password });
 };

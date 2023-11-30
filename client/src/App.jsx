@@ -1,7 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { useEffect, useState } from "react";
-
-import { getProducts } from "./api/products";
 
 import Homepage from "./pages/Homepage";
 import ProductList from "./pages/ProductList";
@@ -15,41 +12,34 @@ import Blogpage from "./pages/Blogpage";
 import Article from "./pages/Article";
 import Faq from "./pages/Faq";
 import PageNotFound from "./pages/PageNotFound";
+import { AuthProvider } from "./contexts/AuthContext";
 
 function App() {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    async function getAllProducts() {
-      const { data } = await getProducts();
-      setProducts(data);
-    }
-    getAllProducts();
-  }, []);
-
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route index element={<Homepage />} />
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Homepage />} />
 
-        <Route path="login" element={<SignInUp isLogin={true} />} />
-        <Route path="signup" element={<SignInUp />} />
+          <Route path="login" element={<SignInUp isLogin={true} />} />
+          <Route path="signup" element={<SignInUp />} />
 
-        <Route path="products" element={<ProductList />}>
-          <Route path=":id" element={<Product />} />
-        </Route>
+          <Route path="products" element={<ProductList />}>
+            <Route path=":id" element={<Product />} />
+          </Route>
 
-        <Route path="about" element={<About />} />
-        <Route path="team" element={<Team />} />
-        <Route path="contact" element={<Contact />} />
+          <Route path="about" element={<About />} />
+          <Route path="team" element={<Team />} />
+          <Route path="contact" element={<Contact />} />
 
-        <Route path="blog" element={<Blogpage />} />
-        <Route path="article" element={<Article />} />
-        <Route path="faq" element={<Faq />} />
+          <Route path="blog" element={<Blogpage />} />
+          <Route path="article" element={<Article />} />
+          <Route path="faq" element={<Faq />} />
 
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
-    </BrowserRouter>
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 

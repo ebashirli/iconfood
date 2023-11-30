@@ -3,9 +3,11 @@ import styles from "./SignInUp.module.scss";
 import Base from "../components/Base";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
-import { login, register } from "../api/auth";
+import { useAuth } from "../contexts/AuthContext";
 
+// eslint-disable-next-line react/prop-types
 export default function Signup({ isLogin }) {
+  const { login, register } = useAuth();
   // PRE-FILL FOR DEV PURPOSES
   const [username, setUsername] = useState("Elvin Bashirli");
   const [email, setEmail] = useState("ebashirli@example.com");
@@ -13,10 +15,12 @@ export default function Signup({ isLogin }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const result = await (isLogin
-      ? login({ identifier: email, password })
-      : register({ username, email, password }));
-    console.log(result);
+    if (!email || !password || (!isLogin && !username)) return;
+
+    // const result = await (isLogin
+    //   ? login({ email, password })
+    //   : register({ username, email, password }));
+    // console.log(result);
   };
 
   return (
