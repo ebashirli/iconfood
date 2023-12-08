@@ -1,0 +1,214 @@
+.mainHeader {
+  background-color: #f6f6f6;
+}
+.mainFooter {
+  background-color: var(--dark-background-color);
+  color: var(--light-text-color);
+
+  footer,
+  header {
+    background-color: inherit;
+  }
+
+  header,
+  h1,
+  h6,
+  p {
+    color: var(--light-text-color);
+  }
+
+  form {
+    border-color: #e6e6e6;
+
+    input {
+      background-color: #f8f8f8;
+      border-radius: 0;
+    }
+  }
+}
+
+.login {
+  background-color: var(--color-dark--1);
+  min-height: calc(100vh - 5rem);
+  text-align: center;
+  margin: 0 3.2rem;
+  padding: 8rem 0;
+  * {
+    font-family: "Montserrat-Bold", Helvetica;
+  }
+
+  header {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2.4rem;
+
+    * {
+      font-weight: 700;
+    }
+
+    h3 {
+      color: var(--text-color);
+      font-size: 40px;
+      letter-spacing: 0.2px;
+      line-height: 50px;
+    }
+
+    p {
+      color: var(--second-text-color);
+      font-weight: 700;
+
+      font-size: 16px;
+      letter-spacing: 0.1px;
+      line-height: 24px;
+      margin: 0 1rem;
+    }
+  }
+
+  main {
+    padding: 4rem;
+
+    display: grid;
+    gap: 2.5rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  label {
+    text-align: left;
+  }
+
+  input {
+    background-color: #f8f8f8;
+    border: 1px solid;
+    border-color: #e6e6e6;
+    border-radius: 5px;
+    height: 50px;
+
+    ::placeholder {
+      background: transparent;
+      border: none;
+      color: var(--second-text-color);
+      font-family: "Montserrat-Regular", Helvetica;
+      font-size: 14px;
+      font-weight: 400;
+      left: 21px;
+      letter-spacing: 0.2px;
+      line-height: 28px;
+    }
+  }
+}
+
+.policy {
+  margin-left: -1rem;
+  margin-right: -1rem;
+  text-align: justify;
+
+  color: var(--second-text-color);
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 16px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fbIcon {
+  width: 2.4rem;
+}
+
+/* Style the form divider */
+.formDivider {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+/* Style the form divider line */
+.formDividerLine {
+  flex: 1;
+  background-color: var(--light-gray-2);
+  height: 2px;
+}
+
+/* Style the form divider text */
+.formDividerText {
+  padding: 0 10px;
+  color: var(--second-text-color);
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.submit {
+  padding: 1.5rem 4rem;
+  width: 100%;
+
+  background-color: var(--success-color);
+  border-radius: 5px;
+
+  color: var(--light-text-color);
+  font-family: "Montserrat-Bold", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  line-height: 22px;
+}
+
+.policy {
+  color: var(--second-text-color);
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 16px;
+}
+
+.hasAccount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--text-color);
+  font-family: "Montserrat-Bold", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  line-height: 24px;
+
+  .signin {
+    color: var(--primary-text-color);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+  }
+}
+
+.facebook {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+
+  text-transform: none;
+
+  padding: 1.5re 2.5rem;
+  background-color: var(--hover-color);
+  color: var(--light-text-color);
+  font-family: "Montserrat-Bold", Helvetica;
+
+  font-size: var(--btn-text-font-size);
+  font-style: var(--btn-text-font-style);
+  font-weight: var(--btn-text-font-weight);
+  letter-spacing: var(--btn-text-letter-spacing);
+  line-height: var(--btn-text-line-height);
+}

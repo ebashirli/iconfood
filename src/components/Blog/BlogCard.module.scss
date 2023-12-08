@@ -1,0 +1,109 @@
+.card {
+  box-shadow: var(--light-drop-shadow);
+
+  @media screen and (min-width: 1000px) {
+    display: flex;
+  }
+}
+
+.imgContainer {
+  position: relative;
+  overflow: hidden;
+  max-height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  width: 100%;
+}
+
+.info {
+  display: grid;
+  padding: 2.5rem;
+  padding-bottom: 3.5rem;
+  gap: 1rem;
+}
+
+.labels {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.h5 {
+  color: var(--text-color);
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  position: fixed;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.aic {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.learn {
+  gap: 1rem;
+}
+
+.new {
+  position: absolute;
+  left: 3rem;
+  top: 2rem;
+
+  align-items: center;
+  background-color: var(--danger-color);
+  border-radius: 3px;
+  padding: 0px 10px;
+
+  color: var(--light-text-color);
+
+  font-family: "Montserrat-Bold", Helvetica;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.new1 span {
+  background-image: url("/blog/3.jfif");
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.new1 span:first-of-type {
+  background-size: 150%;
+
+  background-position: center right;
+}
+
+.new1 span:last-child {
+  background-size: 100%;
+
+  background-position: center left;
+}
+
+.small {
+  font-family: "Montserrat-Regular", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 1rem;
+}
+
+.small:first-child {
+  color: var(--disabled-element-color);
+}
