@@ -1,5 +1,6 @@
 import Button from "../Button";
 import styles from "./ShopCard.module.scss";
+import PropTypes from "prop-types";
 
 function ShopCard({ img }) {
   return (
@@ -16,5 +17,9 @@ function ShopCard({ img }) {
     </div>
   );
 }
+
+ShopCard.propTypes = {
+  img: PropTypes.node,
+};
 
 export default ShopCard;

@@ -1,31 +1,51 @@
-import Base from "../components/Base";
+import { useSelector, useDispatch } from "react-redux";
 import styles from "./Product.module.scss";
+import Clients from "../components/Clients/Clients";
+import { fetchAllProducts } from "../store/reducers/products/productThunk";
+import { useEffect } from "react";
 
-export default function Product() {
+function Products() {
+  const dispatch = useDispatch();
+  const { products } = useSelector((state) => state.product);
+  console.log(products.data.data);
+
+  useEffect(() => {
+    dispatch(fetchAllProducts());
+  }, [dispatch]);
+
   return (
-    <Base>
-      <main className={styles.product}>
-        <section>
-          <img
-            src="img-1.jpg"
-            alt="person with dog overlooking mountain with sunset"
-          />
+    <section className={styles.container}>
+      <header className={styles.header}>
+        <div>
           <div>
-            <h2>About WorldWide.</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo est
-              dicta illum vero culpa cum quaerat architecto sapiente eius non
-              soluta, molestiae nihil laborum, placeat debitis, laboriosam at
-              fuga perspiciatis?
-            </p>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis
-              doloribus libero sunt expedita ratione iusto, magni, id sapiente
-              sequi officiis et.
-            </p>
+            <h3>Ends Today</h3>
+            <h2>Brioche</h2>
+            <a>Explore Items</a>
           </div>
-        </section>
-      </main>
-    </Base>
+          <img src="/products/t1.png" alt="" />
+        </div>
+        <div>
+          <div>
+            <h3>Your Space</h3>
+            <h2>Sourdough</h2>
+            <a>Explore Items</a>
+          </div>
+          <img src="/products/t2.png" alt="" />
+        </div>
+      </header>
+      <div>
+        <aside>Aside</aside>
+        <main>
+          {products.data.data.map((product) => (
+            <li key={product.id}>
+              <img src={product.imageUrl} alt="" />
+            </li>
+          ))}
+        </main>
+      </div>
+      <Clients />
+    </section>
   );
 }
+
+export default Products;

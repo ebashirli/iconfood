@@ -1,4 +1,4 @@
-import SignIn from "../../../components/SignInUp";
+import SignIn from "../components/SignInUp";
 
 function index() {
   return <SignIn isLogin={true} />;

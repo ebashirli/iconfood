@@ -4,17 +4,16 @@ import PropTypes from "prop-types";
 import styles from "./SignInUp.module.scss";
 import Button from "../components/Button";
 import { Link, useNavigate } from "react-router-dom";
-import { login, register } from "../api/auth";
-import { getUserInfo } from "../store/reducers/auth";
-import { routes } from "../router/constants";
+import { login, register } from "../store/reducers/auth";
+import { routes } from "../utils/constants";
 
 export default function SignInUp({ isLogin }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [inputData, setInputData] = useState({
-    username: "",
-    email: "",
-    password: "",
+    username: "Elvin Bashirli",
+    email: "ebashirli@iconfood.az",
+    password: "123456",
   });
 
   const handleChange = (e) => {
@@ -28,6 +27,7 @@ export default function SignInUp({ isLogin }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (
       !inputData.email ||
       !inputData.password ||
@@ -35,12 +35,8 @@ export default function SignInUp({ isLogin }) {
     )
       return;
 
-    const { data } = await (isLogin ? login(inputData) : register(inputData));
-
-    if (data) {
-      dispatch(getUserInfo(data));
-      navigate(routes.HOME);
-    }
+    dispatch(isLogin ? login(inputData) : register(inputData));
+    navigate(routes.HOME);
   };
 
   return (

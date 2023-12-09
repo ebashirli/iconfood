@@ -7,7 +7,7 @@ import Button from "../Button";
 import { logout } from "../../store/reducers/auth";
 
 import { useDispatch } from "react-redux";
-import { routes } from "../../router/constants";
+import { routes } from "../../utils/constants";
 
 function NavMenu() {
   const navigate = useNavigate();

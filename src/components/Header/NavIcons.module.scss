@@ -3,4 +3,24 @@
   justify-content: end;
   align-items: center;
   gap: 2.8rem;
+
+  .iconContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .icon {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+
+  .count {
+    color: var(--primary-color);
+    font-family: "Montserrat-Regular", Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    line-height: 16px;
+  }
 }
