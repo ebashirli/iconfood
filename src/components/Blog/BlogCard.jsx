@@ -5,7 +5,7 @@ function BlogCard({ img }) {
   return (
     <div className={styles.card}>
       <div className={styles.imgContainer}>
-        <img className={styles.img} src={`blog/${img}.jfif`} alt="" />
+        <img className={styles.img} src={`imgs/blog/${img}.jfif`} alt="" />
         <div className={styles.new + " " + styles["new" + img]}>
           N<span>E</span>
           <span>W</span>
@@ -25,17 +25,20 @@ function BlogCard({ img }) {
         </p>
         <div className={styles.meta}>
           <div className={styles.aic}>
-            <img src="blog/icon cool-icon-1.svg" alt="" />
+            <img src="imgs/blog/icon cool-icon-1.svg" alt="" />
             <time>22 April 2021</time>
           </div>
           <div className={styles.aic}>
-            <img src="blog/icon ant-design-area-chart-outlined.svg" alt="" />
+            <img
+              src="imgs/blog/icon ant-design-area-chart-outlined.svg"
+              alt=""
+            />
             <time>10 comments</time>
           </div>
         </div>
         <div className={styles.learn + " " + styles.aic}>
           <label>Learn more</label>
-          <img src="blog/icon arrow-next.svg" alt="" />
+          <img src="imgs/blog/icon arrow-next.svg" alt="" />
         </div>
       </div>
     </div>

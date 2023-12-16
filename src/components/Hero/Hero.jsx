@@ -9,8 +9,8 @@ function Hero() {
     query: "(min-width: 1000px)",
   });
 
-  const imgSrc = "/hero/" + (isDesktop ? "hero-cover-1.png" : "col-md-6.png");
-  console.log(imgSrc);
+  const imgSrc =
+    "imgs/hero/" + (isDesktop ? "hero-cover-1.png" : "col-md-6.png");
 
   return (
     <div className={styles.hero}>
@@ -25,10 +25,6 @@ function Hero() {
         <Button className={styles.button}>shop now</Button>
       </div>
       <img src={imgSrc} alt="" className={styles.img} />
-      {/* <div className={styles.imgCombine}>
-        <img src="hero/technology-1.png" alt="Donat" className={styles.img} />
-        <Circles />
-      </div> */}
     </div>
   );
 }

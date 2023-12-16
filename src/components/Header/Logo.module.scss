@@ -3,6 +3,9 @@
   align-items: center;
   color: var(--text-color);
   background-color: inherit;
+  @media screen and (min-width: 1000px) {
+    margin-right: 8rem;
+  }
 
   h1 {
     font-family: var(--h-3-font-family);

@@ -8,7 +8,7 @@ function Clients() {
           <img
             className={styles.client}
             key={client}
-            src={`clients/fa-brands_${client}.svg`}
+            src={`imgs/clients/fa-brands_${client}.svg`}
             alt={`${client} logo`}
           />
         )

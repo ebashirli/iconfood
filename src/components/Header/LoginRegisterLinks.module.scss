@@ -1,0 +1,27 @@
+.container {
+  img {
+    width: 1.2rem;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: var(--primary-color);
+  font-family: "Montserrat-Regular", Helvetica;
+  font-weight: 400;
+  line-height: 45px;
+  text-align: center;
+  width: 100%;
+
+  .links {
+    color: var(--primary-color);
+    font-family: "Montserrat-Bold", Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0.2px;
+    line-height: 24px;
+    text-align: center;
+  }
+}

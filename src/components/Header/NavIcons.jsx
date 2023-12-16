@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import styles from "./NavIcons.module.scss";
+import LoginRegisterLinks from "./LoginRegisterLinks";
 
 function NavIcons() {
   const isDesktop = useMediaQuery({
@@ -12,7 +13,7 @@ function NavIcons() {
   const isProduct = pathname === "/product";
 
   const productIcons = ["menu"];
-  const mobileIcons = ["shopping-cart", "search", "menu"];
+  const mobileIcons = ["search", "shopping-cart", "menu"];
   const desktopIcons = ["search", "shopping-cart", "heart"];
   const icons = isDesktop
     ? desktopIcons
@@ -22,10 +23,11 @@ function NavIcons() {
 
   return (
     <div className={styles.icons}>
+      <div>{isDesktop && <LoginRegisterLinks />}</div>
       {icons.map((icon) => (
         <Link key={icon} className={styles.iconContainer}>
           <img
-            src={`header/icn-${icon}-icn-xs.svg`}
+            src={`imgs/header/icn-${icon}-icn-xs.svg`}
             alt={`${icon} icon`}
             className={`${styles[icon]} ${styles.icon}`}
           />

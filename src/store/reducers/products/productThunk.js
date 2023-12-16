@@ -3,10 +3,9 @@ import { getAllProducts } from "../../../api/products";
 
 export const fetchAllProducts = createAsyncThunk(
   "products/fetchAllProducts",
-  async (_, { rejectWithValue }) => {
+  async (params, { rejectWithValue }) => {
     try {
-      const result = await getAllProducts();
-
+      const result = await getAllProducts(params);
       return result;
     } catch (error) {
       return rejectWithValue("Xeta bas verdi");

@@ -18,7 +18,7 @@ function Content() {
       <div className={styles.imgs}>
         {[1, 2].map((el) => (
           <img
-            src={`contents/${el}.jfif`}
+            src={`imgs/contents/${el}.jfif`}
             alt=""
             className={styles.img}
             key={el}

@@ -37,9 +37,9 @@ function Footer({ className }) {
       <header className={styles.header}>
         <Logo />
         <div className={styles.social}>
-          <img src="footer/ant-design_facebook-filled.svg" alt="" />
-          <img src="footer/ant-design_instagram-outlined.svg" alt="" />
-          <img src="footer/ant-design_twitter-outlined.svg" alt="" />
+          <img src="imgs/footer/ant-design_facebook-filled.svg" alt="" />
+          <img src="imgs/footer/ant-design_instagram-outlined.svg" alt="" />
+          <img src="imgs/footer/ant-design_twitter-outlined.svg" alt="" />
         </div>
       </header>
       <menu className={styles.menu}>

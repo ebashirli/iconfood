@@ -53,7 +53,11 @@ export default function SignInUp({ isLogin }) {
       </header>
       <main>
         <Button className={styles.facebook}>
-          <img src="header/facebook.svg" alt="" className={styles.fbIcon} />
+          <img
+            src="imgs/header/facebook.svg"
+            alt=""
+            className={styles.fbIcon}
+          />
           <span>Facebook</span>
         </Button>
         <form className={styles.form} onSubmit={handleSubmit}>

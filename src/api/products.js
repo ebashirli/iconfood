@@ -1,6 +1,6 @@
 import { instance } from ".";
 
-export const getAllProducts = async () => {
-  const res = await instance.get("products");
+export const getAllProducts = async ({ limit, page }) => {
+  const res = await instance.get(`products?limit=${limit}&page=${page}`);
   return res;
 };

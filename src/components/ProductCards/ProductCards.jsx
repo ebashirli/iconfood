@@ -1,41 +1,24 @@
 import Button from "../Button";
 import ProductCard from "./ProductCard";
 import styles from "./ProductCards.module.scss";
+import { useLocation } from "react-router-dom";
 
-const products = [
-  {
-    id: 1,
-    title: "Crunchy Crust",
-    link: "$",
-    linkName: "Baguette",
-  },
-  {
-    id: 2,
-    title: "Crescent Roll",
-    link: "$",
-    linkName: "Brioche",
-  },
-  {
-    id: 3,
-    title: "Round Rye",
-    link: "$",
-    linkName: "Brioche",
-  },
-  {
-    id: 4,
-    title: "Crunchy Crust",
-    link: "$",
-    linkName: "Sourdough",
-  },
-  {
-    id: 5,
-    title: "Bun Roll",
-    link: "$",
-    linkName: "Sourdough",
-  },
-];
+import { useSelector, useDispatch } from "react-redux";
+import { fetchAllProducts } from "../../store/reducers/products/productThunk";
+import { useEffect } from "react";
+import Spinner from "../../ui/Spinner";
 
 function ProductCards() {
+  const { pathname } = useLocation();
+  const isProduct = pathname === "/product";
+  const dispatch = useDispatch();
+  const { products, status } = useSelector((state) => state.product);
+  useEffect(() => {
+    dispatch(fetchAllProducts({ limit: isProduct ? null : 10 }));
+  }, [dispatch, isProduct]);
+
+  if (status === "pending") return <Spinner />;
+
   return (
     <div className={styles.main}>
       <header className={styles.header}>

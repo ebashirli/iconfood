@@ -6,13 +6,13 @@ function NavbarDark() {
       <div className={styles.contact}>
         <div className={styles.phone}>
           <a href="tel:2255550118">
-            <img src="header/phone.svg" alt="phone icon" />
+            <img src="imgs/header/phone.svg" alt="phone icon" />
             <span>(225) 555 0118</span>
           </a>
         </div>
         <div className={styles.mail}>
           <a href="mailto:michelle.rivera@example.com">
-            <img src="header/email.svg" alt="mail icon" />
+            <img src="imgs/header/email.svg" alt="mail icon" />
             <span>michelle.rivera@example.com</span>
           </a>
         </div>
@@ -24,7 +24,7 @@ function NavbarDark() {
           {["instagram", "phone", "x", "youtube"].map((el) => (
             <li key={el}>
               <a href="#">
-                <img src={`header/${el}.svg`} alt={`${el} icon`} />
+                <img src={`imgs/header/${el}.svg`} alt={`${el} icon`} />
               </a>
             </li>
           ))}
