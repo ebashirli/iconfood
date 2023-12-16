@@ -12,6 +12,12 @@
   div {
     display: flex;
   }
+  .main {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }
 .product {
   margin: 2.5rem;

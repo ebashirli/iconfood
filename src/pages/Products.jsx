@@ -5,9 +5,9 @@ import { fetchAllProducts } from "../store/reducers/products/productThunk";
 import { useEffect } from "react";
 
 function Products() {
+  console.log("😀😀😀", "helo", "😀😀😀");
   const dispatch = useDispatch();
   const { products } = useSelector((state) => state.product);
-  console.log(products.data.data);
 
   useEffect(() => {
     dispatch(fetchAllProducts());
@@ -22,7 +22,7 @@ function Products() {
             <h2>Brioche</h2>
             <a>Explore Items</a>
           </div>
-          <img src="/products/t1.png" alt="" />
+          {/* <img src="/products/t1.png" alt="" /> */}
         </div>
         <div>
           <div>
@@ -30,17 +30,19 @@ function Products() {
             <h2>Sourdough</h2>
             <a>Explore Items</a>
           </div>
-          <img src="/products/t2.png" alt="" />
+          {/* <img src="/products/t2.png" alt="" /> */}
         </div>
       </header>
       <div>
         <aside>Aside</aside>
-        <main>
-          {products.data.data.map((product) => (
-            <li key={product.id}>
-              <img src={product.imageUrl} alt="" />
-            </li>
-          ))}
+        <main className={styles.main}>
+          <ul>
+            {/* {products.data.data.map((product) => (
+              <li key={product.id}>
+                <img src={product.imageUrl} alt="" />
+              </li>
+            ))} */}
+          </ul>
         </main>
       </div>
       <Clients />
