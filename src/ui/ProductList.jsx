@@ -4,26 +4,31 @@ import { useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchAllProducts } from "../store/reducers/products/productThunk";
 import { useEffect } from "react";
-import Spinner from "../ui/Spinner";
+import Spinner from "./Spinner";
 
-function ProductCards() {
+import styles from "./ProductList.module.scss";
+
+function ProductList({ columnCount = 3 }) {
   const { pathname } = useLocation();
-  const isProduct = pathname === "/product";
+  const isProduct = pathname === "/products";
   const dispatch = useDispatch();
-  const { products, status } = useSelector((state) => state.product);
+  const { products, status, limit } = useSelector((state) => state.product);
+  console.log();
   useEffect(() => {
-    dispatch(fetchAllProducts({ limit: isProduct ? null : 10 }));
-  }, [dispatch, isProduct]);
+    dispatch(fetchAllProducts({ limit: isProduct ? null : limit }));
+  }, [dispatch, isProduct, limit]);
 
   if (status === "pending") return <Spinner />;
-
   return (
-    <div>
+    <ul
+      className={styles.container}
+      style={{ gridTemplateColumns: `repeat(${columnCount}, 1fr)` }}
+    >
       {products.map((product) => (
         <ProductCard key={product.id} {...product} />
       ))}
-    </div>
+    </ul>
   );
 }
 
-export default ProductCards;
+export default ProductList;

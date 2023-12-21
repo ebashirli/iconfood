@@ -1,0 +1,68 @@
+.container {
+  display: grid;
+  justify-content: center;
+  @media screen and (min-width: 1000px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  gap: 1.5rem;
+  text-align: center;
+  padding: 1.6rem;
+  margin-bottom: 1rem;
+
+  & > h5 {
+    justify-self: start;
+    color: var(--second-text-color);
+    font-family: "Montserrat-Bold", Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    line-height: 24px;
+  }
+  .views {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    & > button {
+      border: none;
+      background: none;
+      padding: 1.5rem;
+      & > img {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+    }
+  }
+  .selectContainer {
+    justify-self: end;
+    max-width: 14.1rem;
+    background: #f8f8f8;
+    border-radius: 5px;
+    margin-inline: auto;
+    @media screen and (min-width: 1000px) {
+      margin-inline: unset;
+    }
+    border: 1px solid #dddddd;
+    padding: 1.1rem 1.8rem;
+    padding-right: 2.901rem;
+    justify-self: flex-end;
+
+    select {
+      background: #f8f8f8;
+      width: 100%;
+      border: none;
+
+      color: var(--second-text-color);
+      font-family: "Montserrat-Regular", Helvetica;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.2px;
+      line-height: 2.8rem;
+    }
+  }
+}

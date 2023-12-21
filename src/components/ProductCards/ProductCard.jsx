@@ -8,10 +8,11 @@ function ProductCard({
   reviewCount,
   imageUrl,
   rating,
+  category,
   id,
 }) {
   const { pathname } = useLocation();
-  const isProduct = pathname === "/product";
+  const isProduct = pathname === "/products";
   return (
     <div className={styles.card}>
       <div>
@@ -24,11 +25,11 @@ function ProductCard({
       <div className={styles.info}>
         <h5 className={styles.title}>{title}</h5>
         <a href={"link"} className={styles.link}>
-          {/* {linkName} */}
+          {category.title}
         </a>
         <h5 className={styles.price}>
-          <span className={styles.old}>{price}</span>
-          <span className={styles.new}>{discountPrice}</span>
+          <span className={styles.old}>${price}</span>
+          <span className={styles.new}>${discountPrice}</span>
         </h5>
         {isProduct && (
           <>

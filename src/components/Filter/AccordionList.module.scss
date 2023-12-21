@@ -1,0 +1,34 @@
+.container {
+  padding: 2.5rem;
+  .accordion {
+    padding: 0;
+    box-shadow: none;
+    position: unset;
+
+    .summary {
+      color: var(--text-color);
+      font-family: var(--link-font-family);
+      font-size: var(--link-font-size);
+      font-style: var(--link-font-style);
+      font-weight: var(--link-font-weight);
+      letter-spacing: var(--link-letter-spacing);
+      line-height: var(--link-line-height);
+    }
+
+    .details {
+      display: grid;
+      gap: 1.6rem;
+
+      .detail {
+        color: var(--second-text-color);
+        font-family: var(--link-font-family);
+        font-size: var(--link-font-size);
+        font-style: var(--link-font-style);
+        font-weight: var(--link-font-weight);
+        left: 0;
+        letter-spacing: var(--link-letter-spacing);
+        line-height: var(--link-line-height);
+      }
+    }
+  }
+}

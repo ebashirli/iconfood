@@ -1,0 +1,19 @@
+.container {
+  background-color: #f5f5f5;
+  display: flex;
+  padding: 1.1rem;
+  border-radius: 0.8rem;
+  padding-inline: 2.5rem;
+  input {
+    &:focus {
+      background-color: #f5f5f5;
+    }
+    &::placeholder {
+      color: var(--second-text-color);
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.2px;
+      line-height: 28px;
+    }
+  }
+}

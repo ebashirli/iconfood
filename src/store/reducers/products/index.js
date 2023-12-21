@@ -5,12 +5,17 @@ const initialState = {
   products: [],
   status: "nothing",
   error: "",
+  limit: 10,
 };
 
 export const productReducer = createSlice({
   name: "products",
   initialState,
-  reducers: {},
+  reducers: {
+    setLimit: (state) => {
+      state.limit += 1;
+    },
+  },
   extraReducers: (builder) => {
     return builder
       .addCase(fetchAllProducts.pending, (state) => {
@@ -26,5 +31,7 @@ export const productReducer = createSlice({
       });
   },
 });
+
+export const { setLimit } = productReducer.actions;
 
 export default productReducer.reducer;

@@ -10,7 +10,7 @@ function NavIcons() {
 
   const { pathname } = useLocation();
 
-  const isProduct = pathname === "/product";
+  const isProduct = pathname === "/products";
 
   const productIcons = ["menu"];
   const mobileIcons = ["search", "shopping-cart", "menu"];

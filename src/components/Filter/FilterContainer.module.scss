@@ -1,0 +1,16 @@
+.container {
+  align-self: start;
+  @media screen and (min-width: 1000px) {
+    grid-row: 1/4;
+    row-gap: 4.8rem;
+  }
+  padding: 2.5em;
+  margin-inline: 1.7rem;
+  display: grid;
+  gap: 2.5rem;
+
+  .line {
+    height: 0.1rem;
+    background-color: #e7e7e7;
+  }
+}
