@@ -6,6 +6,7 @@ const initialState = {
   status: "nothing",
   error: "",
   limit: 10,
+  name: null,
 };
 
 export const productReducer = createSlice({
@@ -14,6 +15,9 @@ export const productReducer = createSlice({
   reducers: {
     setLimit: (state) => {
       state.limit += 1;
+    },
+    setName: (state, actions) => {
+      state.name += actions.payload;
     },
   },
   extraReducers: (builder) => {
@@ -32,6 +36,6 @@ export const productReducer = createSlice({
   },
 });
 
-export const { setLimit } = productReducer.actions;
+export const { setLimit, setName } = productReducer.actions;
 
 export default productReducer.reducer;
