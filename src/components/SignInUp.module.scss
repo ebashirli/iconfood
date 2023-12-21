@@ -28,6 +28,10 @@
 }
 
 .login {
+  @media screen and (min-width: 1000px) {
+    margin-inline: auto;
+    max-width: 30%;
+  }
   background-color: var(--color-dark--1);
   min-height: calc(100vh - 5rem);
   text-align: center;

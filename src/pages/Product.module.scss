@@ -14,11 +14,35 @@
 
   .main {
     display: grid;
+    padding-inline: 1.7rem;
     @media screen and (min-width: 1000px) {
       grid-template-columns: 1fr 5fr;
+      grid-template-rows: 82px 82px 1fr 74px;
     }
 
-    ul {
+    .router {
+      grid-column: 1/-1;
+      display: grid;
+      justify-items: center;
+      gap: 3rem;
+      @media screen and (min-width: 1000px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      & > h3 {
+        padding: 2.4rem 0;
+      }
+
+      & > h4 {
+        padding: 1rem 0;
+        display: flex;
+        gap: 1.5rem;
+      }
+    }
+
+    ul:first-child {
       display: grid;
       @media screen and (min-width: 1000px) {
         grid-template-columns: repeat(3, 1fr);
@@ -78,4 +102,14 @@
 
 .topCards-2 {
   background-color: #ddebf8;
+}
+
+.searchInput {
+  form {
+    display: flex !important;
+    justify-content: start;
+    img {
+      padding-left: 2.5rem;
+    }
+  }
 }

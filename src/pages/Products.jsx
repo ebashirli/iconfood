@@ -1,7 +1,9 @@
 import styles from "./Product.module.scss";
 import Clients from "../components/Clients/Clients";
-import ProductList from "./ProductList";
-import Button from "../components/Button";
+import ProductList from "../ui/ProductList";
+import ViewControl from "../components/ViewControl";
+import Pagination from "../components/Pagination";
+import FilterContainer from "../components/Filter/FilterContainer";
 
 function Products() {
   return (
@@ -23,24 +25,20 @@ function Products() {
           </div>
           <img src="imgs/products/t2.png" alt="" />
         </div>
-
-        <h3>Shop</h3>
-        <h4>
-          <span>Home</span>
-          <span> &gt; </span>
-          <span>Shop</span>
-        </h4>
       </header>
       <main className={styles.main}>
-        <aside>
-          <h5>Filter :</h5>
-          <input type="search" />
-          <input type="range" />
-          <input type="number" placeholder="0" />
-          <input type="number" placeholder="1000" />
-          <Button />
-        </aside>
+        <div className={styles.router}>
+          <h3>Shop</h3>
+          <h4>
+            <span>Home</span>
+            <span> &gt; </span>
+            <span>Shop</span>
+          </h4>
+        </div>
+        <FilterContainer />
+        <ViewControl />
         <ProductList />
+        <Pagination />
       </main>
       <Clients />
     </section>

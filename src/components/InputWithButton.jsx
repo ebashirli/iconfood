@@ -7,13 +7,15 @@ function InputWithButton({
   placeholder = null,
   submitText = "Submit",
   errorText = null,
+  withButton = true,
 }) {
   return (
     <div className={styles.container + " " + className}>
-      <header className={styles.header}>{title}</header>
-      <form>
+      {title && <header className={styles.header}>{title}</header>}
+      <form className="form">
         <input type="text" placeholder={placeholder} />
-        <Button className={styles.button}>{submitText}</Button>
+
+        {withButton && <Button className={styles.button}>{submitText}</Button>}
       </form>
       <p>{errorText}</p>
     </div>

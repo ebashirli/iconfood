@@ -8,7 +8,7 @@ import { routes } from "../../utils/constants";
 
 import Button from "../Button";
 
-function LoginRegisterLinks() {
+function LoginRegisterLinks({ className }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -20,7 +20,7 @@ function LoginRegisterLinks() {
   return token ? (
     <Button onClick={handleLogout}>Logout</Button>
   ) : (
-    <div className={styles.container}>
+    <div className={styles.container + " " + className}>
       <img src="imgs/header/profile.svg" alt="" />
       <div className={styles.links}>
         <NavLink to="/login">Login</NavLink>

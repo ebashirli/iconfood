@@ -1,0 +1,37 @@
+.container {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2.5rem;
+  .slider {
+    accent-color: var(--primary-color);
+  }
+  .prices {
+    display: flex;
+    gap: 1.6rem;
+    input {
+      background-color: #f5f5f5;
+      display: flex;
+      padding: 1.1rem;
+      border-radius: 0.8rem;
+      padding-inline: 2.5rem;
+
+      &:focus {
+        background-color: #f5f5f5;
+      }
+      &::placeholder {
+        color: var(--second-text-color);
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  .button {
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    text-transform: none;
+  }
+}
