@@ -1,5 +1,5 @@
 import styles from "./ProductCard.module.scss";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function ProductCard({
   title,
@@ -14,7 +14,7 @@ function ProductCard({
   const { pathname } = useLocation();
   const isProduct = pathname === "/products";
   return (
-    <div className={styles.card}>
+    <Link to={`products/${id}`} className={styles.card}>
       <div>
         <img
           src={imageUrl ? imageUrl : `/imgs/product-cards/${id}.png`}
@@ -51,7 +51,7 @@ function ProductCard({
           </>
         )}
       </div>
-    </div>
+    </Link>
   );
 }
 
