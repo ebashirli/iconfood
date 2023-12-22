@@ -16,14 +16,14 @@ function ProductList({ columnCount = 3 }) {
   const { pathname } = useLocation();
   const isProduct = pathname === "/products";
   const dispatch = useDispatch();
-  const { products, status, limit, query, price } = useSelector(
+  const { products, status, limit, query, sort } = useSelector(
     (state) => state.product
   );
   useEffect(() => {
     dispatch(
-      fetchAllProducts({ limit: isProduct ? null : limit, query, price })
+      fetchAllProducts({ limit: isProduct ? null : limit, query, sort })
     );
-  }, [dispatch, isProduct, limit, query, price]);
+  }, [dispatch, isProduct, limit, query, sort]);
 
   if (status === "pending") return <Spinner />;
   return (

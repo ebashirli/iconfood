@@ -1,6 +1,13 @@
 import styles from "./ViewControl.module.scss";
+import { setSort } from "../store/reducers/products";
+import { useDispatch } from "react-redux";
 
 function ViewControl() {
+  const dispatch = useDispatch();
+
+  function handleSort(e) {
+    dispatch(setSort(e.target.value));
+  }
   return (
     <div className={styles.container}>
       <h5>Showing all 12 results</h5>
@@ -14,10 +21,10 @@ function ViewControl() {
         </button>
       </div>
       <div className={styles.selectContainer}>
-        <select name="sortBy" id="sortBy">
+        <select name="sortBy" id="sortBy" onChange={handleSort}>
           <option value="populaity">Populaity</option>
-          <option value="cheapestFirst">Cheapest</option>
-          <option value="cheapestLast">Most Expensive</option>
+          <option value="price">Cheapest</option>
+          <option value="-price">Most Expensive</option>
         </select>
       </div>
     </div>

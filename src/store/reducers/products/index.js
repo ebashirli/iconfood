@@ -7,7 +7,7 @@ const initialState = {
   error: "",
   limit: 10,
   query: "",
-  price: { min: 0, max: 1000 },
+  sort: null,
 };
 
 export const productReducer = createSlice({
@@ -21,8 +21,8 @@ export const productReducer = createSlice({
       state.query = !state.query ? state.query + actions.payload : "";
     },
 
-    setPrice: (state, actions) => {
-      state.price = actions.payload;
+    setSort: (state, actions) => {
+      state.sort = actions.payload;
     },
   },
   extraReducers: (builder) => {
@@ -41,6 +41,6 @@ export const productReducer = createSlice({
   },
 });
 
-export const { setLimit, setQuery, setPrice } = productReducer.actions;
+export const { setLimit, setQuery, setSort } = productReducer.actions;
 
 export default productReducer.reducer;
