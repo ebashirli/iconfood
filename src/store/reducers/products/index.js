@@ -6,7 +6,8 @@ const initialState = {
   status: "nothing",
   error: "",
   limit: 10,
-  name: null,
+  query: "",
+  price: { min: 0, max: 1000 },
 };
 
 export const productReducer = createSlice({
@@ -16,8 +17,12 @@ export const productReducer = createSlice({
     setLimit: (state) => {
       state.limit += 1;
     },
-    setName: (state, actions) => {
-      state.name += actions.payload;
+    setQuery: (state, actions) => {
+      state.query = !state.query ? state.query + actions.payload : "";
+    },
+
+    setPrice: (state, actions) => {
+      state.price = actions.payload;
     },
   },
   extraReducers: (builder) => {
@@ -36,6 +41,6 @@ export const productReducer = createSlice({
   },
 });
 
-export const { setLimit, setName } = productReducer.actions;
+export const { setLimit, setQuery, setPrice } = productReducer.actions;
 
 export default productReducer.reducer;

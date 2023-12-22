@@ -1,5 +1,5 @@
 import styles from "./SearchInput.module.scss";
-import { setName } from "../../store/reducers/products";
+import { setQuery } from "../../store/reducers/products";
 import { useDispatch } from "react-redux";
 
 function SearchInput() {
@@ -11,7 +11,9 @@ function SearchInput() {
       <input
         type="text"
         placeholder="Search"
-        onChange={(e) => dispatch(setName(e.nativeEvent.data))}
+        onChange={(e) => {
+          return dispatch(setQuery(e.target.value));
+        }}
       />
     </div>
   );

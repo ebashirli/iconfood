@@ -14,7 +14,11 @@ function ProductCard({
   const { pathname } = useLocation();
   const isProduct = pathname === "/products";
   return (
-    <Link to={`products/${id}`} className={styles.card}>
+    <Link
+      to={`${isProduct ? "" : "products/"}${id}`}
+      className={styles.card}
+      replace
+    >
       <div>
         <img
           src={imageUrl ? imageUrl : `/imgs/product-cards/${id}.png`}
