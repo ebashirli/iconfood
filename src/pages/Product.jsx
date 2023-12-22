@@ -1,6 +1,6 @@
 import styles from "./Product.module.scss";
 import Clients from "../components/Clients/Clients";
-import ProductList from "../ui/ProductList";
+import ProductList from "../components/ProductList";
 import { Link } from "react-router-dom";
 
 function Product() {

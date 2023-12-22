@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { useUser } from "../features/auth/useUser";
-import Spinner from "./Spinner.jsx";
+import Spinner from "./Spinner";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 const FullPage = styled.div`
   height: 100vh;
@@ -16,7 +16,8 @@ function ProtectedRoute({ children }) {
   const navigate = useNavigate();
 
   // 1. Load the authenticated user
-  const { isLoading, isAuthenticated } = useUser();
+  const { token, isLoading } = useSelector((state) => state.auth);
+  const isAuthenticated = !!token;
 
   // 2. If there is NO authenticated user, redirect to the /login
   useEffect(

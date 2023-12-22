@@ -1,5 +1,5 @@
 import Button from "../Button";
-import ProductList from "../../ui/ProductList";
+import ProductList from "../../components/ProductList";
 import styles from "./ProductCards.module.scss";
 
 import { useDispatch } from "react-redux";

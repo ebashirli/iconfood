@@ -8,15 +8,19 @@ function ViewControl() {
   function handleSort(e) {
     dispatch(setSort(e.target.value));
   }
+
+  function handleCardView() {}
+  function handleListView() {}
+
   return (
     <div className={styles.container}>
       <h5>Showing all 12 results</h5>
       <div className={styles.views}>
         <h6>Views:</h6>
-        <button>
+        <button className={styles.cardView} onClick={handleCardView}>
           <img src="/imgs/filter/nail.svg" alt="" />
         </button>
-        <button>
+        <button className={styles.listView} onClick={handleListView}>
           <img src="/imgs/filter/list.svg" alt="" />
         </button>
       </div>
